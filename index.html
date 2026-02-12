@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official campaign website for Candidate Name." />
+  <title>Candidate Name for Office | Campaign</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <img src="assets/img/logo.svg" alt="Candidate Name logo" class="brand-logo" />
+        <span class="brand-text">Candidate Name</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        ☰
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="issues.html">Issues</a>
+        <a href="events.html">Events</a>
+        <a href="press.html">Press</a>
+        <a href="volunteer.html" class="btn btn-ghost">Volunteer</a>
+        <a href="donate.html" class="btn btn-primary">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" role="region" aria-label="Campaign introduction">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Putting community first</p>
+          <h1>Candidate Name for Office</h1>
+          <p class="lead">
+            A practical plan for safer neighborhoods, better schools, and an economy that works for working families.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="donate.html">Donate</a>
+            <a class="btn btn-ghost" href="volunteer.html">Volunteer</a>
+          </div>
+          <p class="fineprint">Paid for by Friends of Candidate Name.</p>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <div class="hero-photo" style="background-image:url('assets/img/hero.jpg')"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK ACTIONS -->
+    <section class="band">
+      <div class="container quick-actions">
+        <div class="card">
+          <h2>Get Updates</h2>
+          <p>Weekly campaign news and event invites.</p>
+          <form class="inline-form" id="newsletterForm">
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@email.com" required />
+            <button class="btn btn-primary" type="submit">Sign up</button>
+          </form>
+          <p class="micro" id="newsletterMsg" aria-live="polite"></p>
+        </div>
+
+        <div class="card">
+          <h2>Upcoming Event</h2>
+          <p class="micro">Saturday • 2:00 PM • Community Center</p>
+          <p>Join us for a town hall Q&amp;A and meet the team.</p>
+          <a class="btn btn-ghost" href="events.html">See all events</a>
+        </div>
+
+        <div class="card">
+          <h2>Volunteer</h2>
+          <p>Door knocking, phones, data entry, or hosting.</p>
+          <a class="btn btn-ghost" href="volunteer.html">Join the team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ISSUES PREVIEW -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>On the issues</h2>
+          <p class="subhead">Clear priorities. Measurable results.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="issue">
+            <h3>Public Safety</h3>
+            <p>Invest in prevention, accountable policing, and mental health response teams.</p>
+            <a href="issues.html#safety" class="text-link">Read more →</a>
+          </article>
+
+          <article class="issue">
+            <h3>Schools &amp; Skills</h3>
+            <p>Support teachers, expand career pathways, and modernize facilities.</p>
+            <a href="issues.html#education" class="text-link">Read more →</a>
+          </article>
+
+          <article class="issue">
+            <h3>Cost of Living</h3>
+            <p>Lower everyday costs with smart infrastructure and local job growth.</p>
+            <a href="issues.html#economy" class="text-link">Read more →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENDORSEMENTS -->
+    <section class="band">
+      <div class="container">
+        <div class="section-head">
+          <h2>Endorsements</h2>
+          <p class="subhead">Community leaders backing the plan.</p>
+        </div>
+
+        <div class="quotes">
+          <figure class="quote">
+            <blockquote>“A steady leader who shows up and listens.”</blockquote>
+            <figcaption>— Local Leader Name</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>“The right mix of experience and urgency.”</blockquote>
+            <figcaption>— Organization / Union</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>“Focused on results, not drama.”</blockquote>
+            <figcaption>— Small Business Owner</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- DONATE BAND -->
+    <section class="cta">
+      <div class="container cta-inner">
+        <h2>Fuel the campaign</h2>
+        <p>Chip in today to help reach more voters.</p>
+        <div class="cta-buttons">
+          <a class="btn btn-primary" href="donate.html">$10</a>
+          <a class="btn btn-primary" href="donate.html">$25</a>
+          <a class="btn btn-primary" href="donate.html">$50</a>
+          <a class="btn btn-ghost" href="donate.html">Other</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Candidate Name</strong>
+        <p class="micro">Candidate for Office • City, State</p>
+        <p class="micro">Contact: info@campaign.org • (555) 555-5555</p>
+      </div>
+
+      <div class="footer-links" aria-label="Footer links">
+        <a href="issues.html">Issues</a>
+        <a href="events.html">Events</a>
+        <a href="press.html">Press</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="donate.html">Donate</a>
+      </div>
+
+      <div class="disclaimer">
+        <p class="paidfor">Paid for by Friends of Candidate Name.</p>
+        <p class="micro">© <span id="year"></span> Friends of Candidate Name. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
