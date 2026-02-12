@@ -3,12 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Issues and policy positions for Candidate Name." />
-  <title>Issues — Candidate Name</title>
+  <meta name="description" content="Donate to the campaign to support outreach and operations." />
+  <title>Donate — Candidate Name</title>
   <link rel="stylesheet" href="assets/css/styles.min.css" />
-  <meta property="og:title" content="Issues — Candidate Name" />
-  <meta property="og:description" content="Clear priorities and measurable policy proposals." />
-  <meta name="twitter:card" content="summary" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -33,24 +30,29 @@
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <h1>On the issues</h1>
-          <p class="subhead">Clear priorities. Measurable results.</p>
+          <h1>Support the campaign</h1>
+          <p class="subhead">Contributions help us reach voters and organize locally.</p>
         </div>
 
-        <article id="safety">
-          <h2>Public Safety</h2>
-          <p>Invest in prevention, accountable policing, and mental health response teams. Specific proposals include...</p>
-        </article>
+        <div class="donate-options">
+          <a class="btn btn-primary" href="#">$10</a>
+          <a class="btn btn-primary" href="#">$25</a>
+          <a class="btn btn-primary" href="#">$50</a>
+          <a class="btn btn-ghost" href="#">Other</a>
+        </div>
 
-        <article id="education">
-          <h2>Schools &amp; Skills</h2>
-          <p>Support teachers, expand career pathways, and modernize facilities. Specific proposals include...</p>
-        </article>
+        <p class="micro">Note: This is a placeholder. Integrate a payment processor for live donations.</p>
 
-        <article id="economy">
-          <h2>Cost of Living &amp; Jobs</h2>
-          <p>Lower everyday costs with smart infrastructure and local job growth. Specific proposals include...</p>
-        </article>
+        <h3>Recommended integration (example)</h3>
+        <p class="micro">Use a hosted processor (Stripe, ActBlue, etc.) to handle payments and compliance. Below is an example using Stripe Checkout — replace with your keys and server-side endpoints.</p>
+
+        <pre class="micro">&lt;!-- Example: Stripe Checkout button (client-only example; NOT production ready) --&gt;
+&lt;form action="/create-checkout-session" method="POST"&gt;
+  &lt;button class="btn btn-primary" type="submit"&gt;Donate $25&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+
+        <p class="micro">Next steps: choose a processor, create server-side endpoints for secure checkout, add receipts and privacy notices, and confirm compliance with local campaign finance rules.</p>
       </div>
     </section>
   </main>

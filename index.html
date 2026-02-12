@@ -5,15 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Official campaign website for Candidate Name." />
   <title>Candidate Name for Office | Campaign</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="preload" href="assets/img/hero.jpg" as="image">
+  <link rel="stylesheet" href="assets/css/styles.min.css" />
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Candidate Name for Office" />
+  <meta property="og:description" content="A practical plan for safer neighborhoods, better schools, and an economy that works for working families." />
+  <meta property="og:image" content="assets/img/hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Candidate Name",
+    "url": "https://example.org/",
+    "logo": "https://example.org/assets/img/logo.svg",
+    "sameAs": [
+      "https://twitter.com/example",
+      "https://facebook.com/example"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "email": "info@campaign.org",
+      "contactType": "customer support"
+    }]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Home">
-        <img src="assets/img/logo.svg" alt="Candidate Name logo" class="brand-logo" />
+        <a class="brand" href="index.html" aria-label="Home">
+        <img src="assets/img/logo.svg" alt="Candidate Name logo" class="brand-logo" loading="lazy" width="48" height="48" />
         <span class="brand-text">Candidate Name</span>
       </a>
 
@@ -22,7 +46,7 @@
         ☰
       </button>
 
-      <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <nav id="site-nav" class="site-nav" aria-label="Primary" role="navigation">
         <a href="issues.html">Issues</a>
         <a href="events.html">Events</a>
         <a href="press.html">Press</a>
@@ -32,7 +56,7 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" role="main">
     <!-- HERO -->
     <section class="hero" role="region" aria-label="Campaign introduction">
       <div class="container hero-grid">
@@ -49,8 +73,12 @@
           <p class="fineprint">Paid for by Friends of Candidate Name.</p>
         </div>
 
-        <div class="hero-media" aria-hidden="true">
-          <div class="hero-photo" style="background-image:url('assets/img/hero.jpg')"></div>
+        <div class="hero-media">
+          <picture>
+            <source type="image/webp" srcset="assets/img/hero-400.webp 400w, assets/img/hero-800.webp 800w, assets/img/hero-1200.webp 1200w" sizes="(max-width:900px) 100vw, 420px">
+            <source type="image/jpeg" srcset="assets/img/hero-400.jpg 400w, assets/img/hero-800.jpg 800w, assets/img/hero-1200.jpg 1200w" sizes="(max-width:900px) 100vw, 420px">
+            <img src="assets/img/hero-800.jpg" alt="Candidate at a community event" class="hero-photo img" loading="lazy" width="1200" height="800">
+          </picture>
         </div>
       </div>
     </section>
@@ -63,7 +91,7 @@
           <p>Weekly campaign news and event invites.</p>
           <form class="inline-form" id="newsletterForm">
             <label class="sr-only" for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@email.com" required />
+            <input id="email" name="email" type="email" placeholder="you@email.com" required aria-describedby="newsletterMsg" />
             <button class="btn btn-primary" type="submit">Sign up</button>
           </form>
           <p class="micro" id="newsletterMsg" aria-live="polite"></p>
@@ -154,12 +182,12 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container footer-grid">
       <div>
         <strong>Candidate Name</strong>
         <p class="micro">Candidate for Office • City, State</p>
-        <p class="micro">Contact: info@campaign.org • (555) 555-5555</p>
+        <p class="micro">Contact: <a href="mailto:info@campaign.org">info@campaign.org</a> • <a href="tel:+15555555555">(555) 555-5555</a></p>
       </div>
 
       <div class="footer-links" aria-label="Footer links">
@@ -177,6 +205,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.min.js" defer></script>
 </body>
 </html>

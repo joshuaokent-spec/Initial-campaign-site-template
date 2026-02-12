@@ -3,12 +3,43 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Issues and policy positions for Candidate Name." />
-  <title>Issues — Candidate Name</title>
+  <meta name="description" content="Campaign events and town halls." />
+  <title>Events — Candidate Name</title>
   <link rel="stylesheet" href="assets/css/styles.min.css" />
-  <meta property="og:title" content="Issues — Candidate Name" />
-  <meta property="og:description" content="Clear priorities and measurable policy proposals." />
+  <meta property="og:title" content="Events — Candidate Name" />
+  <meta property="og:description" content="Join our town halls, meet-and-greets, and community gatherings." />
   <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Event",
+        "name": "Town Hall — Community Center",
+        "startDate": "2026-02-21T14:00:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Community Center",
+          "address": "123 Main St, City, State"
+        },
+        "description": "Town hall Q&A with Candidate Name."
+      },
+      {
+        "@type": "Event",
+        "name": "Volunteer Kickoff",
+        "startDate": "2026-02-26T18:00:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Campaign HQ",
+          "address": "456 Campaign Ave, City, State"
+        },
+        "description": "Volunteer training and canvassing plan."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -33,24 +64,22 @@
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <h1>On the issues</h1>
-          <p class="subhead">Clear priorities. Measurable results.</p>
+          <h1>Upcoming Events</h1>
+          <p class="subhead">Town halls, meet-and-greets, and community gatherings.</p>
         </div>
 
-        <article id="safety">
-          <h2>Public Safety</h2>
-          <p>Invest in prevention, accountable policing, and mental health response teams. Specific proposals include...</p>
-        </article>
-
-        <article id="education">
-          <h2>Schools &amp; Skills</h2>
-          <p>Support teachers, expand career pathways, and modernize facilities. Specific proposals include...</p>
-        </article>
-
-        <article id="economy">
-          <h2>Cost of Living &amp; Jobs</h2>
-          <p>Lower everyday costs with smart infrastructure and local job growth. Specific proposals include...</p>
-        </article>
+        <ul class="events-list">
+          <li>
+            <strong>Town Hall — Community Center</strong>
+            <div class="micro">Saturday • 2:00 PM</div>
+            <p>Join us for Q&amp;A and to meet the team.</p>
+          </li>
+          <li>
+            <strong>Volunteer Kickoff</strong>
+            <div class="micro">Thursday • 6:00 PM</div>
+            <p>Training and canvassing plan.</p>
+          </li>
+        </ul>
       </div>
     </section>
   </main>

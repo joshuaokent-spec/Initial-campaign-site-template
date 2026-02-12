@@ -1,0 +1,11 @@
+{
+  "name": "campaign-site-tools",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "images": "node tools/convert-images.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.4"
+  }
+}

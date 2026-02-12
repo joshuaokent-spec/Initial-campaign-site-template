@@ -3,12 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Issues and policy positions for Candidate Name." />
-  <title>Issues — Candidate Name</title>
+  <meta name="description" content="Volunteer opportunities and sign-up for Candidate Name." />
+  <title>Volunteer — Candidate Name</title>
   <link rel="stylesheet" href="assets/css/styles.min.css" />
-  <meta property="og:title" content="Issues — Candidate Name" />
-  <meta property="og:description" content="Clear priorities and measurable policy proposals." />
-  <meta name="twitter:card" content="summary" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -33,24 +30,31 @@
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <h1>On the issues</h1>
-          <p class="subhead">Clear priorities. Measurable results.</p>
+          <h1>Join the team</h1>
+          <p class="subhead">Help with canvassing, phones, data, and events.</p>
         </div>
 
-        <article id="safety">
-          <h2>Public Safety</h2>
-          <p>Invest in prevention, accountable policing, and mental health response teams. Specific proposals include...</p>
-        </article>
+        <form id="volunteerForm" class="form">
+          <label for="name">Full name</label>
+          <input id="name" name="name" required aria-required="true" />
 
-        <article id="education">
-          <h2>Schools &amp; Skills</h2>
-          <p>Support teachers, expand career pathways, and modernize facilities. Specific proposals include...</p>
-        </article>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required aria-required="true" aria-describedby="volunteerMsg" />
 
-        <article id="economy">
-          <h2>Cost of Living &amp; Jobs</h2>
-          <p>Lower everyday costs with smart infrastructure and local job growth. Specific proposals include...</p>
-        </article>
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" />
+
+          <label for="interests">I can help with</label>
+          <select id="interests" name="interests">
+            <option>Canvassing</option>
+            <option>Phonebanking</option>
+            <option>Data entry</option>
+            <option>Host an event</option>
+          </select>
+
+          <button class="btn btn-primary" type="submit">Sign up</button>
+          <p id="volunteerMsg" class="micro" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
