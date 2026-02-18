@@ -73,4 +73,92 @@ document.addEventListener('DOMContentLoaded', function () {
 			volunteerForm.reset();
 		});
 	}
+
+	// Contact form handler
+	var contactForm = document.getElementById('contactForm');
+	if (contactForm) {
+		var formStatus = document.getElementById('form-status');
+		contactForm.addEventListener('submit', function (e) {
+			e.preventDefault();
+			
+			// Clear previous errors
+			document.querySelectorAll('.error-message').forEach(function(el) {
+				el.classList.remove('show');
+				el.textContent = '';
+			});
+			
+			// Get form data
+			var formData = new FormData(contactForm);
+			var name = (formData.get('name') || '').toString().trim();
+			var email = (formData.get('email') || '').toString().trim();
+			var phone = (formData.get('phone') || '').toString().trim();
+			var subject = (formData.get('subject') || '').toString().trim();
+			var message = (formData.get('message') || '').toString().trim();
+			var optin = contactForm.querySelector('input[name="optin"]').checked;
+			
+			// Validate required fields
+			var hasErrors = false;
+			if (!name) {
+				document.getElementById('name-error').textContent = 'Please enter your name.';
+				document.getElementById('name-error').classList.add('show');
+				hasErrors = true;
+			}
+			if (!email || !isValidEmail(email)) {
+				document.getElementById('email-error').textContent = 'Please enter a valid email.';
+				document.getElementById('email-error').classList.add('show');
+				hasErrors = true;
+			}
+			if (!subject) {
+				document.getElementById('subject-error').textContent = 'Please select a subject.';
+				document.getElementById('subject-error').classList.add('show');
+				hasErrors = true;
+			}
+			if (!message) {
+				document.getElementById('message-error').textContent = 'Please enter a message.';
+				document.getElementById('message-error').classList.add('show');
+				hasErrors = true;
+			}
+			
+			if (hasErrors) return;
+			
+			// Store message locally as placeholder for real backend
+			try {
+				var messages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
+				messages.push({
+					name: name,
+					email: email,
+					phone: phone,
+					subject: subject,
+					message: message,
+					optin: optin,
+					ts: Date.now()
+				});
+				localStorage.setItem('contactMessages', JSON.stringify(messages));
+			} catch (err) {
+				console.warn('storage failed', err);
+			}
+			
+			// Show success message
+			if (formStatus) {
+				formStatus.textContent = 'Thanks for reaching out! We\'ll get back to you soon.';
+				formStatus.classList.add('show', 'success');
+			}
+			
+			// Reset form
+			contactForm.reset();
+			
+			// Clear success message after 5 seconds
+			setTimeout(function() {
+				if (formStatus) {
+					formStatus.classList.remove('show', 'success');
+				}
+			}, 5000);
+		});
+	}
 });
+
+// Helper function to validate email
+function isValidEmail(email) {
+	var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	return emailRegex.test(email);
+}
