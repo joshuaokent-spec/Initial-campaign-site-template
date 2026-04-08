@@ -96,7 +96,17 @@
           </p>
         </div>
 
-        <form id="volunteerForm" class="form" aria-label="Volunteer sign-up form">
+        <form
+          id="volunteerForm"
+          class="form"
+          aria-label="Volunteer sign-up form"
+          action="https://formspree.io/f/xykbvqyd"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="New volunteer sign-up submission" />
+          <input type="hidden" name="_next" value="thank-you.html" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
           <label for="name">Full name</label>
           <input id="name" name="name" required aria-required="true" />
 

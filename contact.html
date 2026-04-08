@@ -56,7 +56,17 @@
               your message and follow up as soon as possible.
             </p>
 
-            <form id="contactForm" class="contact-form" aria-label="Contact form">
+            <form
+              id="contactForm"
+              class="contact-form"
+              aria-label="Contact form"
+              action="https://formspree.io/f/REPLACE_WITH_YOUR_REAL_FORMSPREE_ID"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="New campaign contact form submission" />
+              <input type="hidden" name="_next" value="thank-you.html" />
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
               <div class="form-group">
                 <label for="contact-name">Full Name <span aria-label="required">*</span></label>
                 <input
@@ -133,6 +143,7 @@
                   id="contact-optin"
                   name="optin"
                   type="checkbox"
+                  value="yes"
                 />
                 <label for="contact-optin">Sign me up for campaign updates and future event information</label>
               </div>
@@ -188,7 +199,7 @@
             </div>
 
             <div class="info-card">
-              <h3>Press & Media</h3>
+              <h3>Press &amp; Media</h3>
               <p class="micro">
                 Members of the press can use this page to request interviews, media statements, or background information.
                 For more campaign updates, visit the <a href="press.html">Press</a> page.
