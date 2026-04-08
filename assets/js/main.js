@@ -1,4 +1,4 @@
-/* Main JS for navigation, forms, and small UI behaviors */
+/* Main JS for navigation and small UI behaviors */
 
 document.addEventListener('DOMContentLoaded', function () {
 	// Fill current year in footer
@@ -24,31 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
-	// Simple newsletter handler
-	var newsletterForm = document.getElementById('newsletterForm');
-	if (newsletterForm) {
-		var newsletterMsg = document.getElementById('newsletterMsg');
-		newsletterForm.addEventListener('submit', function (e) {
-			e.preventDefault();
-			var email = newsletterForm.querySelector('input[type="email"]').value.trim();
-			if (!email) {
-				if (newsletterMsg) newsletterMsg.textContent = 'Please enter a valid email.';
-				return;
-			}
-
-			// Simulate submission
-			try {
-				var subs = JSON.parse(localStorage.getItem('newsletterSubs') || '[]');
-				subs.push({ email: email, ts: Date.now() });
-				localStorage.setItem('newsletterSubs', JSON.stringify(subs));
-			} catch (err) {
-				console.warn('storage failed', err);
-			}
-
-			if (newsletterMsg) newsletterMsg.textContent = 'Thanks — you are signed up!';
-			newsletterForm.reset();
-		});
-	}
+	// Newsletter form:
+	// Intentionally no JavaScript submit handler here.
+	// This allows the browser to submit the form directly to Formspree.
 
 	// Volunteer form:
 	// Intentionally no JavaScript submit handler here.

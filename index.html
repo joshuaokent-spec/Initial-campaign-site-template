@@ -110,7 +110,17 @@
             Stay informed about campaign news, upcoming appearances, volunteer opportunities,
             and new ways to get involved.
           </p>
-          <form class="inline-form" id="newsletterForm">
+
+          <form
+            class="inline-form"
+            id="newsletterForm"
+            action="https://formspree.io/f/maqlkgoo"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New newsletter signup" />
+            <input type="hidden" name="_next" value="thank-you.html" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
             <label class="sr-only" for="email">Email</label>
             <input
               id="email"
