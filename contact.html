@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Contact Candidate Name's campaign. Send us a message, ask questions, or get involved." />
+  <meta name="description" content="Contact the campaign to ask questions, share feedback, request information, or get involved." />
   <title>Contact Us | Candidate Name Campaign</title>
   <link rel="stylesheet" href="assets/css/styles.min.css" />
 </head>
@@ -27,6 +27,7 @@
         <a href="issues.html">Issues</a>
         <a href="events.html">Events</a>
         <a href="press.html">Press</a>
+        <a href="contact.html">Contact</a>
         <a href="volunteer.html" class="btn btn-ghost">Volunteer</a>
         <a href="donate.html" class="btn btn-primary">Donate</a>
       </nav>
@@ -34,23 +35,28 @@
   </header>
 
   <main id="main" role="main">
-    <!-- PAGE HEADER -->
     <section class="page-header">
       <div class="container">
         <h1>Get in Touch</h1>
-        <p class="lead">Questions? Ideas? We'd love to hear from you.</p>
+        <p class="lead">
+          A strong campaign starts with listening. Whether you have a question, want to share your concerns,
+          are interested in volunteering, or need press information, our team wants to hear from you.
+        </p>
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
     <section class="section">
       <div class="container">
         <div class="contact-grid">
-          <!-- Contact Form -->
           <div class="contact-form-wrapper">
-            <h2>Send us a message</h2>
+            <h2>Send Us a Message</h2>
+            <p class="micro">
+              Use the form below to contact the campaign. We welcome questions about the platform, events,
+              volunteer opportunities, community concerns, and media requests. A member of the team will review
+              your message and follow up as soon as possible.
+            </p>
+
             <form id="contactForm" class="contact-form" aria-label="Contact form">
-              <!-- Name Field -->
               <div class="form-group">
                 <label for="contact-name">Full Name <span aria-label="required">*</span></label>
                 <input
@@ -64,7 +70,6 @@
                 <span id="name-error" class="error-message" aria-live="polite"></span>
               </div>
 
-              <!-- Email Field -->
               <div class="form-group">
                 <label for="contact-email">Email <span aria-label="required">*</span></label>
                 <input
@@ -78,9 +83,8 @@
                 <span id="email-error" class="error-message" aria-live="polite"></span>
               </div>
 
-              <!-- Phone Field -->
               <div class="form-group">
-                <label for="contact-phone">Phone Number</label>
+                <label for="contact-phone">Phone Number (optional)</label>
                 <input
                   id="contact-phone"
                   name="phone"
@@ -91,7 +95,6 @@
                 <span id="phone-error" class="error-message" aria-live="polite"></span>
               </div>
 
-              <!-- Subject Field -->
               <div class="form-group">
                 <label for="contact-subject">Subject <span aria-label="required">*</span></label>
                 <select
@@ -101,59 +104,62 @@
                   aria-describedby="subject-error"
                 >
                   <option value="">Choose a topic...</option>
-                  <option value="inquiry">General Inquiry</option>
-                  <option value="volunteer">Volunteer Interest</option>
-                  <option value="event">Event Question</option>
-                  <option value="press">Press Inquiry</option>
-                  <option value="feedback">Feedback</option>
+                  <option value="general-inquiry">General Inquiry</option>
+                  <option value="volunteer-interest">Volunteer Interest</option>
+                  <option value="event-question">Event Question</option>
+                  <option value="press-inquiry">Press Inquiry</option>
+                  <option value="policy-feedback">Policy Feedback</option>
+                  <option value="community-concern">Community Concern</option>
                   <option value="other">Other</option>
                 </select>
                 <span id="subject-error" class="error-message" aria-live="polite"></span>
               </div>
 
-              <!-- Message Field -->
               <div class="form-group">
                 <label for="contact-message">Message <span aria-label="required">*</span></label>
                 <textarea
                   id="contact-message"
                   name="message"
                   required
-                  placeholder="Tell us what's on your mind..."
-                  rows="6"
+                  placeholder="Tell us what is on your mind..."
+                  rows="7"
                   aria-describedby="message-error"
                 ></textarea>
                 <span id="message-error" class="error-message" aria-live="polite"></span>
               </div>
 
-              <!-- Checkbox Opt-in -->
               <div class="form-group form-checkbox">
                 <input
                   id="contact-optin"
                   name="optin"
                   type="checkbox"
                 />
-                <label for="contact-optin">Sign me up for campaign updates</label>
+                <label for="contact-optin">Sign me up for campaign updates and future event information</label>
               </div>
 
-              <!-- Submit Button -->
               <button type="submit" class="btn btn-primary btn-large">Send Message</button>
-
-              <!-- Form Status Message -->
               <p id="form-status" class="form-status" aria-live="polite" aria-atomic="true"></p>
             </form>
+
+            <div class="card" style="margin-top: 1.5rem;">
+              <h3>What can you contact us about?</h3>
+              <p class="micro">
+                We encourage community members to reach out about upcoming events, questions about policy positions,
+                speaking requests, volunteer opportunities, accessibility concerns, and ways the campaign can better
+                connect with local residents.
+              </p>
+            </div>
           </div>
 
-          <!-- Contact Info -->
-          <div class="contact-info">
+          <aside class="contact-info" aria-label="Campaign contact information">
             <div class="info-card">
-              <h3>Direct Contact</h3>
+              <h3>Email the Campaign</h3>
               <p>
                 <strong>Email:</strong><br>
                 <a href="mailto:info@campaign.org">info@campaign.org</a>
               </p>
-              <p>
-                <strong>Phone:</strong><br>
-                <a href="tel:+15555555555">(555) 555-5555</a>
+              <p class="micro">
+                For class-project safety, personal phone numbers and home addresses are not listed publicly on this site.
               </p>
             </div>
 
@@ -174,14 +180,30 @@
             </div>
 
             <div class="info-card">
-              <h3>Follow Us</h3>
+              <h3>Response Times</h3>
+              <p class="micro">
+                Our team aims to respond to general inquiries within 2–3 business days. Media inquiries and event-related
+                requests may be answered sooner depending on campaign scheduling.
+              </p>
+            </div>
+
+            <div class="info-card">
+              <h3>Press & Media</h3>
+              <p class="micro">
+                Members of the press can use this page to request interviews, media statements, or background information.
+                For more campaign updates, visit the <a href="press.html">Press</a> page.
+              </p>
+            </div>
+
+            <div class="info-card">
+              <h3>Follow the Campaign</h3>
               <p>
                 <a href="https://twitter.com/candidate" target="_blank" rel="noopener">Twitter</a><br>
                 <a href="https://facebook.com/candidate" target="_blank" rel="noopener">Facebook</a><br>
                 <a href="https://instagram.com/candidate" target="_blank" rel="noopener">Instagram</a>
               </p>
             </div>
-          </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -192,7 +214,7 @@
       <div>
         <strong>Candidate Name</strong>
         <p class="micro">Candidate for Office • City, State</p>
-        <p class="micro">Contact: <a href="mailto:info@campaign.org">info@campaign.org</a> • <a href="tel:+15555555555">(555) 555-5555</a></p>
+        <p class="micro">Contact: <a href="mailto:info@campaign.org">info@campaign.org</a></p>
       </div>
 
       <div class="footer-links" aria-label="Footer links">
@@ -201,6 +223,8 @@
         <a href="events.html">Events</a>
         <a href="press.html">Press</a>
         <a href="contact.html">Contact</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="donate.html">Donate</a>
       </div>
 
       <div class="disclaimer">

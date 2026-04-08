@@ -3,25 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Official campaign website for Candidate Name." />
+  <meta name="description" content="Official campaign website for Candidate Name. Learn about the platform, upcoming events, volunteer opportunities, and how to support the campaign." />
   <title>Candidate Name for Office | Campaign</title>
-  <link rel="preload" href="assets/img/hero.jpg" as="image">
+  <link rel="preload" href="assets/img/hero-800.jpg" as="image">
   <link rel="stylesheet" href="assets/css/styles.min.css" />
-  <!-- Open Graph / Social -->
+
   <meta property="og:title" content="Candidate Name for Office" />
-  <meta property="og:description" content="A practical plan for safer neighborhoods, better schools, and an economy that works for working families." />
-  <meta property="og:image" content="assets/img/hero.jpg" />
+  <meta property="og:description" content="A community-focused campaign centered on opportunity, public trust, and practical solutions." />
+  <meta property="og:image" content="assets/img/hero-800.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Candidate Name",
+    "name": "Candidate Name Campaign",
     "url": "https://example.org/",
     "logo": "https://example.org/assets/img/logo.svg",
     "sameAs": [
-      "https://twitter.com/example",
-      "https://facebook.com/example"
+      "https://twitter.com/candidate",
+      "https://facebook.com/candidate",
+      "https://instagram.com/candidate"
     ],
     "contactPoint": [{
       "@type": "ContactPoint",
@@ -36,7 +38,7 @@
 
   <header class="site-header" role="banner">
     <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Home">
+      <a class="brand" href="index.html" aria-label="Home">
         <img src="assets/img/logo.svg" alt="Candidate Name logo" class="brand-logo" loading="lazy" width="48" height="48" />
         <span class="brand-text">Candidate Name</span>
       </a>
@@ -47,6 +49,7 @@
       </button>
 
       <nav id="site-nav" class="site-nav" aria-label="Primary" role="navigation">
+        <a href="index.html">Home</a>
         <a href="issues.html">Issues</a>
         <a href="events.html">Events</a>
         <a href="press.html">Press</a>
@@ -58,41 +61,64 @@
   </header>
 
   <main id="main" role="main">
-    <!-- HERO -->
     <section class="hero" role="region" aria-label="Campaign introduction">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="kicker">Putting community first</p>
           <h1>Candidate Name for Office</h1>
           <p class="lead">
-            A practical plan for safer neighborhoods, better schools, and an economy that works for working families.
+            This campaign is built on the belief that public service should be rooted in honesty,
+            accountability, and a real commitment to the people it serves. Candidate Name is running
+            to bring practical leadership, thoughtful solutions, and stronger community connection to public office.
           </p>
+
           <div class="hero-cta">
             <a class="btn btn-primary" href="donate.html">Donate</a>
             <a class="btn btn-ghost" href="volunteer.html">Volunteer</a>
           </div>
+
           <p class="fineprint">Paid for by Friends of Candidate Name.</p>
         </div>
 
         <div class="hero-media">
           <picture>
-            <source type="image/webp" srcset="assets/img/hero-400.webp 400w, assets/img/hero-800.webp 800w, assets/img/hero-1200.webp 1200w" sizes="(max-width:900px) 100vw, 420px">
-            <source type="image/jpeg" srcset="assets/img/hero-400.jpg 400w, assets/img/hero-800.jpg 800w, assets/img/hero-1200.jpg 1200w" sizes="(max-width:900px) 100vw, 420px">
-            <img src="assets/img/hero-800.jpg" alt="Candidate at a community event" class="hero-photo img" loading="lazy" width="1200" height="800">
+            <source
+              type="image/webp"
+              srcset="assets/img/hero-400.webp 400w, assets/img/hero-800.webp 800w, assets/img/hero-1200.webp 1200w"
+              sizes="(max-width:900px) 100vw, 420px">
+            <source
+              type="image/jpeg"
+              srcset="assets/img/hero-400.jpg 400w, assets/img/hero-800.jpg 800w, assets/img/hero-1200.jpg 1200w"
+              sizes="(max-width:900px) 100vw, 420px">
+            <img
+              src="assets/img/hero-800.jpg"
+              alt="Candidate speaking with community members at a campaign event"
+              class="hero-photo img"
+              loading="lazy"
+              width="1200"
+              height="800">
           </picture>
         </div>
       </div>
     </section>
 
-    <!-- QUICK ACTIONS -->
     <section class="band">
       <div class="container quick-actions">
         <div class="card">
           <h2>Get Updates</h2>
-          <p>Weekly campaign news and event invites.</p>
+          <p>
+            Stay informed about campaign news, upcoming appearances, volunteer opportunities,
+            and new ways to get involved.
+          </p>
           <form class="inline-form" id="newsletterForm">
             <label class="sr-only" for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@email.com" required aria-describedby="newsletterMsg" />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@email.com"
+              required
+              aria-describedby="newsletterMsg" />
             <button class="btn btn-primary" type="submit">Sign up</button>
           </form>
           <p class="micro" id="newsletterMsg" aria-live="polite"></p>
@@ -100,79 +126,142 @@
 
         <div class="card">
           <h2>Upcoming Event</h2>
-          <p class="micro">Saturday • 2:00 PM • Community Center</p>
-          <p>Join us for a town hall Q&amp;A and meet the team.</p>
+          <p class="micro">Saturday, February 21 • 2:00 PM • Downtown Community Center</p>
+          <p>
+            Join us for a public town hall focused on local concerns, campaign priorities,
+            and open conversation with residents.
+          </p>
           <a class="btn btn-ghost" href="events.html">See all events</a>
         </div>
 
         <div class="card">
           <h2>Volunteer</h2>
-          <p>Door knocking, phones, data entry, or hosting.</p>
+          <p>
+            Help the campaign through canvassing, outreach, event support, phone banking,
+            or community engagement efforts.
+          </p>
           <a class="btn btn-ghost" href="volunteer.html">Join the team</a>
         </div>
       </div>
     </section>
 
-    <!-- ISSUES PREVIEW -->
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <h2>On the issues</h2>
-          <p class="subhead">Clear priorities. Measurable results.</p>
+          <h2>Why this campaign matters</h2>
+          <p class="subhead">
+            A campaign should do more than ask for support. It should clearly explain what it stands for and who it serves.
+          </p>
+        </div>
+
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <p class="micro">
+            Candidate Name is focused on building trust through visible leadership, open communication,
+            and practical solutions that respond to real community needs. This campaign is centered on
+            listening first, acting with purpose, and making public service feel more accessible and accountable.
+          </p>
         </div>
 
         <div class="grid-3">
           <article class="issue">
             <h3>Public Safety</h3>
-            <p>Invest in prevention, accountable policing, and mental health response teams.</p>
+            <p>
+              Support safer neighborhoods through prevention, responsible leadership,
+              community partnership, and practical public safety planning.
+            </p>
             <a href="issues.html#safety" class="text-link">Read more →</a>
           </article>
 
           <article class="issue">
-            <h3>Schools &amp; Skills</h3>
-            <p>Support teachers, expand career pathways, and modernize facilities.</p>
+            <h3>Education &amp; Opportunity</h3>
+            <p>
+              Invest in schools, community growth, and long-term opportunity so residents
+              and families have a stronger path forward.
+            </p>
             <a href="issues.html#education" class="text-link">Read more →</a>
           </article>
 
           <article class="issue">
             <h3>Cost of Living</h3>
-            <p>Lower everyday costs with smart infrastructure and local job growth.</p>
+            <p>
+              Focus on practical decisions that help working families, strengthen local opportunity,
+              and improve everyday quality of life.
+            </p>
             <a href="issues.html#economy" class="text-link">Read more →</a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ENDORSEMENTS -->
     <section class="band">
       <div class="container">
         <div class="section-head">
+          <h2>How you can help</h2>
+          <p class="subhead">
+            There is more than one way to support the campaign, and every contribution matters.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="issue">
+            <h3>Volunteer Your Time</h3>
+            <p>
+              Help at events, connect with voters, assist with outreach, and become part of the campaign team.
+            </p>
+            <a href="volunteer.html" class="text-link">Volunteer →</a>
+          </article>
+
+          <article class="issue">
+            <h3>Attend an Event</h3>
+            <p>
+              Show up, ask questions, hear the message directly, and take part in the campaign’s public events.
+            </p>
+            <a href="events.html" class="text-link">View events →</a>
+          </article>
+
+          <article class="issue">
+            <h3>Support the Campaign</h3>
+            <p>
+              Contributions help fund outreach, organizing, communications, and the day-to-day work of the campaign.
+            </p>
+            <a href="donate.html" class="text-link">Donate →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
           <h2>Endorsements</h2>
-          <p class="subhead">Community leaders backing the plan.</p>
+          <p class="subhead">Community voices and local support help build momentum.</p>
         </div>
 
         <div class="quotes">
           <figure class="quote">
-            <blockquote>“A steady leader who shows up and listens.”</blockquote>
-            <figcaption>— Local Leader Name</figcaption>
+            <blockquote>“A steady leader who listens carefully and speaks clearly about what this community needs.”</blockquote>
+            <figcaption>— Local Community Leader</figcaption>
           </figure>
+
           <figure class="quote">
-            <blockquote>“The right mix of experience and urgency.”</blockquote>
-            <figcaption>— Organization / Union</figcaption>
+            <blockquote>“This campaign feels focused, grounded, and committed to real solutions instead of empty promises.”</blockquote>
+            <figcaption>— Civic Organization Representative</figcaption>
           </figure>
+
           <figure class="quote">
-            <blockquote>“Focused on results, not drama.”</blockquote>
+            <blockquote>“Candidate Name brings the kind of energy, discipline, and public-minded leadership people are looking for.”</blockquote>
             <figcaption>— Small Business Owner</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- DONATE BAND -->
     <section class="cta">
       <div class="container cta-inner">
-        <h2>Fuel the campaign</h2>
-        <p>Chip in today to help reach more voters.</p>
+        <h2>Fuel the Campaign</h2>
+        <p>
+          Chip in today to help expand outreach, connect with more voters, and strengthen this campaign’s message in the community.
+        </p>
         <div class="cta-buttons">
           <a class="btn btn-primary" href="donate.html">$10</a>
           <a class="btn btn-primary" href="donate.html">$25</a>
@@ -188,13 +277,15 @@
       <div>
         <strong>Candidate Name</strong>
         <p class="micro">Candidate for Office • City, State</p>
-        <p class="micro">Contact: <a href="mailto:info@campaign.org">info@campaign.org</a> • <a href="tel:+15555555555">(555) 555-5555</a></p>
+        <p class="micro">Contact: <a href="mailto:info@campaign.org">info@campaign.org</a></p>
       </div>
 
       <div class="footer-links" aria-label="Footer links">
+        <a href="index.html">Home</a>
         <a href="issues.html">Issues</a>
         <a href="events.html">Events</a>
         <a href="press.html">Press</a>
+        <a href="contact.html">Contact</a>
         <a href="volunteer.html">Volunteer</a>
         <a href="donate.html">Donate</a>
       </div>

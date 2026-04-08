@@ -3,23 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Donate to the campaign to support outreach and operations." />
-  <title>Donate — Candidate Name</title>
+  <meta name="description" content="Support the campaign with a contribution to help fund outreach, events, and voter engagement." />
+  <title>Donate | Candidate Name Campaign</title>
   <link rel="stylesheet" href="assets/css/styles.min.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Home">
         <img src="assets/img/logo.svg" alt="Candidate Name logo" class="brand-logo" loading="lazy" width="48" height="48" />
         <span class="brand-text">Candidate Name</span>
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Toggle navigation</span>☰</button>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        ☰
+      </button>
+
       <nav id="site-nav" class="site-nav" aria-label="Primary" role="navigation">
+        <a href="index.html">Home</a>
         <a href="issues.html">Issues</a>
         <a href="events.html">Events</a>
         <a href="press.html">Press</a>
+        <a href="contact.html">Contact</a>
         <a href="volunteer.html" class="btn btn-ghost">Volunteer</a>
         <a href="donate.html" class="btn btn-primary">Donate</a>
       </nav>
@@ -27,32 +35,93 @@
   </header>
 
   <main id="main" role="main">
+    <section class="page-header">
+      <div class="container">
+        <h1>Support the Campaign</h1>
+        <p class="lead">
+          Every contribution helps the campaign connect with more voters, organize community events,
+          share policy priorities, and build the local support needed to make a difference.
+        </p>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <h1>Support the campaign</h1>
-          <p class="subhead">Contributions help us reach voters and organize locally.</p>
+          <h2>Make a Contribution</h2>
+          <p class="subhead">
+            Whether you give a small amount or make a larger contribution, your support helps power campaign outreach and voter engagement.
+          </p>
         </div>
 
         <div class="donate-options">
-          <a class="btn btn-primary" href="#">$10</a>
-          <a class="btn btn-primary" href="#">$25</a>
-          <a class="btn btn-primary" href="#">$50</a>
-          <a class="btn btn-ghost" href="#">Other</a>
+          <a class="btn btn-primary" href="#donation-info">$10</a>
+          <a class="btn btn-primary" href="#donation-info">$25</a>
+          <a class="btn btn-primary" href="#donation-info">$50</a>
+          <a class="btn btn-primary" href="#donation-info">$100</a>
+          <a class="btn btn-ghost" href="#donation-info">Other</a>
         </div>
 
-        <p class="micro">Note: This is a placeholder. Integrate a payment processor for live donations.</p>
+        <div class="card" id="donation-info" style="margin-top: 1.5rem;">
+          <h3>Why contributions matter</h3>
+          <p class="micro">
+            Campaigns rely on community support to fund outreach materials, event preparation,
+            volunteer coordination, digital communications, and voter contact efforts. Donations help ensure
+            the campaign can continue reaching residents with clear information and meaningful opportunities to engage.
+          </p>
+        </div>
 
-        <h3>Recommended integration (example)</h3>
-        <p class="micro">Use a hosted processor (Stripe, ActBlue, etc.) to handle payments and compliance. Below is an example using Stripe Checkout — replace with your keys and server-side endpoints.</p>
+        <div class="grid-3" style="margin-top: 1.5rem;">
+          <article class="issue">
+            <h3>$10 Contribution</h3>
+            <p>Helps support printed handouts, flyers, and small outreach materials used at campaign events and community gatherings.</p>
+          </article>
 
-        <pre class="micro">&lt;!-- Example: Stripe Checkout button (client-only example; NOT production ready) --&gt;
-&lt;form action="/create-checkout-session" method="POST"&gt;
-  &lt;button class="btn btn-primary" type="submit"&gt;Donate $25&lt;/button&gt;
-&lt;/form&gt;
-</pre>
+          <article class="issue">
+            <h3>$25 Contribution</h3>
+            <p>Supports volunteer efforts, neighborhood outreach, and the tools needed to stay connected with voters.</p>
+          </article>
 
-        <p class="micro">Next steps: choose a processor, create server-side endpoints for secure checkout, add receipts and privacy notices, and confirm compliance with local campaign finance rules.</p>
+          <article class="issue">
+            <h3>$50+ Contribution</h3>
+            <p>Helps expand communications, event readiness, and the campaign’s ability to reach more people across the community.</p>
+          </article>
+        </div>
+
+        <div class="card" style="margin-top: 2rem;">
+          <h3>Secure Donation Processing</h3>
+          <p class="micro">
+            For a live campaign website, donations would be processed through a secure third-party platform such as
+            Stripe, PayPal, ActBlue, or another hosted payment provider. Using a trusted processor helps protect donor
+            information and ensures transactions are handled safely and professionally.
+          </p>
+          <p class="micro">
+            This class project page is designed to demonstrate the structure and purpose of a campaign donation page,
+            while keeping the site safe and appropriate for academic use.
+          </p>
+        </div>
+
+        <div class="card" style="margin-top: 1.5rem;">
+          <h3>Transparency and Trust</h3>
+          <p class="micro">
+            Supporters deserve to know how their contributions help. Donations strengthen campaign communication,
+            public outreach, volunteer coordination, and the ability to share a clear message with the community.
+            A strong grassroots campaign is built by many people giving what they can and participating in ways that matter.
+          </p>
+        </div>
+
+        <div class="card" style="margin-top: 1.5rem;">
+          <h3>Other Ways to Help</h3>
+          <p class="micro">
+            Not everyone can donate financially, and that matters too. You can still make a big impact by volunteering,
+            attending events, sharing campaign information, and encouraging others to stay informed.
+          </p>
+          <p>
+            <a class="text-link" href="volunteer.html">Become a volunteer →</a><br>
+            <a class="text-link" href="events.html">Attend an event →</a><br>
+            <a class="text-link" href="contact.html">Contact the campaign →</a>
+          </p>
+        </div>
       </div>
     </section>
   </main>
@@ -62,18 +131,22 @@
       <div>
         <strong>Candidate Name</strong>
         <p class="micro">Candidate for Office • City, State</p>
-        <p class="micro">Contact: <a href="mailto:info@campaign.org">info@campaign.org</a> • <a href="tel:+15555555555">(555) 555-5555</a></p>
+        <p class="micro">Contact: <a href="mailto:info@campaign.org">info@campaign.org</a></p>
       </div>
+
       <div class="footer-links" aria-label="Footer links">
+        <a href="index.html">Home</a>
         <a href="issues.html">Issues</a>
         <a href="events.html">Events</a>
         <a href="press.html">Press</a>
+        <a href="contact.html">Contact</a>
         <a href="volunteer.html">Volunteer</a>
         <a href="donate.html">Donate</a>
       </div>
+
       <div class="disclaimer">
         <p class="paidfor">Paid for by Friends of Candidate Name.</p>
-        <p class="micro">© <span id="year"></span> Friends of Candidate Name.</p>
+        <p class="micro">© <span id="year"></span> Friends of Candidate Name. All rights reserved.</p>
       </div>
     </div>
   </footer>
