@@ -1,31 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.org/</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/</loc>
+    <lastmod>2026-04-16</lastmod>
   </url>
   <url>
-    <loc>https://example.org/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/index.html</loc>
+    <lastmod>2026-04-16</lastmod>
   </url>
   <url>
-    <loc>https://example.org/issues.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/issues.html</loc>
+    <lastmod>2026-04-16</lastmod>
   </url>
   <url>
-    <loc>https://example.org/events.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/about.html</loc>
+    <lastmod>2026-04-16</lastmod>
   </url>
   <url>
-    <loc>https://example.org/press.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/research-and-development.html</loc>
+    <lastmod>2026-04-16</lastmod>
   </url>
   <url>
-    <loc>https://example.org/volunteer.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/for-farmers.html</loc>
+    <lastmod>2026-04-16</lastmod>
   </url>
   <url>
-    <loc>https://example.org/donate.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/for-educators-and-students.html</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/for-small-business-owners.html</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/for-the-people.html</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/for-lansing.html</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/for-michigan.html</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/events.html</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/press.html</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/contact.html</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/volunteer.html</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
+    <loc>https://joshuaokent-spec.github.io/Initial-campaign-site-template/donate.html</loc>
+    <lastmod>2026-04-16</lastmod>
   </url>
 </urlset>

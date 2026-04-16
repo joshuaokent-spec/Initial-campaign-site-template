@@ -1,66 +1,63 @@
-# Campaign Site — Candidate Name
+# Joshua Kent Campaign Site
 
-This is a simple static campaign website scaffold with pages for issues, events, press, volunteering, and donations.
+This repository contains a polished static campaign website for Joshua Kent's Michigan House run, with shared assets under `assets/`, standalone content pages at the repo root, and an optional Node server for Stripe Checkout previews.
 
-Quick start (preview locally):
+## Quick start
 
-1. From the `Campaign SIte` folder run a local static server. With Python 3:
+For a fast static preview:
 
 ```powershell
 python -m http.server 8000
-
-# then open http://localhost:8000 in your browser
 ```
 
-Deployment suggestions:
-- Host on GitHub Pages by pushing this folder to a repository and enabling Pages.
-- Or use Netlify / Vercel for automatic deploys from a Git branch.
+Then open [http://localhost:8000](http://localhost:8000).
 
-Next tasks:
-- Integrate a payment processor (Stripe, ActBlue) for `donate.html`.
-- Add analytics, forms backend, and accessibility audits.
-- Replace placeholder content (candidate name, logos, contact info) with final copy.
- 
-Stripe example server (optional)
---------------------------------
-If you want to handle donations using Stripe Checkout, there's a minimal example server in `server/`.
+## Full local preview with donation checkout
 
-1. Change into the `server` folder and install dependencies:
+The `server/` folder can now serve the website and the Stripe checkout endpoint from the same local origin.
+
+1. Install the server dependencies:
 
 ```powershell
 cd server
 npm install
 ```
 
-2. Set your secret key and start the server:
+2. Add a Stripe secret key:
 
 ```powershell
 setx STRIPE_SECRET_KEY "sk_test_your_key_here"
+```
+
+3. Start the local server:
+
+```powershell
 npm start
 ```
 
-3. Client flow (simple): POST JSON to `http://localhost:4242/create-checkout-session` with `{ "amount": 2500 }` and redirect the browser to the returned `url`.
+Then open [http://localhost:4242](http://localhost:4242).
 
-Note: This is an example for development. For production, securely store keys, validate amounts, add receipts, and ensure compliance with campaign finance rules.
+If `STRIPE_SECRET_KEY` is not set, the donation page will stay honest: it will explain that checkout is not configured instead of sending visitors to dead links.
 
-Image generation (optional but recommended)
----------------------------------------
-This project includes a small Node script that generates WebP and JPEG responsive hero images and PNG fallbacks for the SVG logo. Run these steps from the `Campaign SIte` folder:
+## Project structure
 
-```powershell
-cd "Campaign SIte"
-npm install
-npm run images
-```
+- `index.html` - homepage and primary campaign entry point
+- `issues.html`, `for-lansing.html`, `for-michigan.html`, `press.html` - long-form platform and campaign messaging
+- `events.html`, `volunteer.html`, `contact.html`, `donate.html` - conversion and engagement flows
+- `thank-you.html` - shared success page for contact, volunteer, updates, and donation flows
+- `assets/css/styles.css` - the active visual system
+- `assets/js/main.js` - navigation, donation, reveal, and thank-you page behavior
+- `assets/img/` - logo, hero illustration, and share card artwork
+- `server/server.js` - optional Express + Stripe preview server
 
-The script will generate `assets/img/hero-400.webp`, `hero-800.webp`, `hero-1200.webp`, corresponding JPEGs, and `logo-48.png` / `logo-96.png`.
+## Deployment notes
 
-If you prefer not to generate images locally, provide appropriately sized images in `assets/img` with those filenames and the site will use them.
+- The site works as a plain static deployment on GitHub Pages, Netlify, or Vercel.
+- If you want live donations, deploy the `server/` code or replace the donate buttons with hosted checkout links.
+- If you deploy somewhere other than GitHub Pages, update the absolute URLs in `robots.txt` and `sitemap.xml`.
 
-Files of interest:
-- `index.html` — homepage
-- `assets/css/styles.css` — stylesheet
-- `assets/js/main.js` — nav and simple form handlers
-- `volunteer.html`, `issues.html`, `events.html`, `press.html`, `donate.html` — scaffolded pages
+## Maintenance notes
 
-If you want, I can wire Stripe Checkout, add form backends, or create a deployment workflow next.
+- Forms submit directly to Formspree.
+- The thank-you page uses query params so each form can land on a tailored success state.
+- Social links were intentionally removed until official campaign accounts are ready, which is better than shipping broken stand-ins.

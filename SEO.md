@@ -1,24 +1,15 @@
-# SEO checklist — Campaign Site
+# SEO notes
 
-Quick actions applied:
+The site now includes:
 
-- Added page `title` and `meta description` tags for primary pages.
-- Added Open Graph and Twitter meta tags (`og:title`, `og:description`, `og:image`, `twitter:card`) to improve social sharing.
+- unique page titles and descriptions across the primary pages
+- upgraded Open Graph metadata with a shared social card at `assets/img/share-card.svg`
+- cleaned-up structured data on the homepage without fake social URLs
+- a `noindex` thank-you page so form confirmation pages do not get indexed
+- a GitHub Pages-ready `robots.txt` and `sitemap.xml`
 
-Recommended SEO improvements:
+## Before launch
 
-- Create unique `title` and `meta description` per page (avoid duplicates).
-- Add structured data (JSON-LD) for organization and events (Event schema for `events.html`).
-
-Actions taken:
-
-- Added Organization JSON-LD to `index.html`.
-- Added Event JSON-LD to `events.html` for two sample events. Update event `startDate` and addresses to match real data.
-- Provide meaningful `alt` attributes on all images (hero image already set; ensure other images follow suit).
-- Generate and add a sitemap.xml and robots.txt for crawlers.
-- Use semantic headings and ensure one `h1` per page.
-- Add canonical link tags for pages when serving the site from multiple domains.
-- Implement accessible, crawlable navigation; avoid JS-only navigational structures that prevent crawlers from finding pages.
-- Add share/open-graph images sized appropriately (1200x630 for OG recommended).
-
-If you'd like, I can add JSON-LD for the campaign as an Organization and add an `events` schema for upcoming events next.
+- Replace any GitHub Pages URLs in `sitemap.xml` and `robots.txt` if the site will live on a custom domain.
+- Add real campaign social accounts once they exist.
+- If you want richer search results for public appearances, add fresh `Event` schema only when you have confirmed dates, locations, and accessibility details.

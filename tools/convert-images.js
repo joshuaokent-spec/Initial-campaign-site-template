@@ -1,44 +1,81 @@
-const path = require('path');
-const fs = require('fs');
-const sharp = require('sharp');
+const path = require("path");
+const fs = require("fs");
+const sharp = require("sharp");
 
-const srcDir = path.join(__dirname, '..', 'assets', 'img');
-const outDir = srcDir;
+const assetDir = path.join(__dirname, "..", "assets", "img");
 
-async function run() {
-  if (!fs.existsSync(path.join(outDir, 'hero.jpg'))) {
-    console.error('Source hero.jpg not found in assets/img — please add it and re-run.');
-    process.exit(1);
+const jobs = [
+  {
+    source: "home-leadership-banner.svg",
+    outputs: [
+      { file: "hero-banner-1200.png", width: 1200 },
+      { file: "hero-banner-1600.png", width: 1600 }
+    ]
+  },
+  {
+    source: "share-card.svg",
+    outputs: [
+      { file: "share-card-1200x630.png", width: 1200, height: 630 }
+    ]
+  },
+  {
+    source: "logo.svg",
+    outputs: [
+      { file: "logo-48.png", width: 48, height: 48 },
+      { file: "logo-96.png", width: 96, height: 96 }
+    ]
+  }
+];
+
+async function exportAsset(job) {
+  const inputPath = path.join(assetDir, job.source);
+
+  if (!fs.existsSync(inputPath)) {
+    console.warn("Skipping missing asset:", job.source);
+    return [];
   }
 
-  console.log('Generating hero responsive images...');
-  const sizes = [400, 800, 1200];
-  for (const w of sizes) {
-    await sharp(path.join(outDir, 'hero.jpg'))
-      .resize({ width: w })
-      .webp({ quality: 80 })
-      .toFile(path.join(outDir, `hero-${w}.webp`));
+  const createdFiles = [];
 
-    await sharp(path.join(outDir, 'hero.jpg'))
-      .resize({ width: w })
-      .jpeg({ quality: 80 })
-      .toFile(path.join(outDir, `hero-${w}.jpg`));
+  for (const output of job.outputs) {
+    const outputPath = path.join(assetDir, output.file);
+    let pipeline = sharp(inputPath).png();
+
+    if (output.width && output.height) {
+      pipeline = pipeline.resize(output.width, output.height, {
+        fit: "cover"
+      });
+    } else if (output.width) {
+      pipeline = pipeline.resize({ width: output.width });
+    }
+
+    await pipeline.toFile(outputPath);
+    createdFiles.push(output.file);
   }
 
-  // Convert SVG logo to PNG fallbacks at 1x and 2x
-  const logoSvg = path.join(outDir, 'logo.svg');
-  if (fs.existsSync(logoSvg)) {
-    console.log('Generating logo PNG fallbacks...');
-    await sharp(logoSvg).png().resize(48, 48).toFile(path.join(outDir, 'logo-48.png'));
-    await sharp(logoSvg).png().resize(96, 96).toFile(path.join(outDir, 'logo-96.png'));
-  } else {
-    console.warn('logo.svg not found — skipping logo PNG generation.');
-  }
-
-  console.log('Image generation complete. Files created in assets/img: hero-400.webp, hero-800.webp, hero-1200.webp and hero-{w}.jpg; logo-48.png, logo-96.png');
+  return createdFiles;
 }
 
-run().catch(err => {
-  console.error(err);
+async function run() {
+  const created = [];
+
+  for (const job of jobs) {
+    const createdFiles = await exportAsset(job);
+    created.push.apply(created, createdFiles);
+  }
+
+  if (!created.length) {
+    console.warn("No image fallbacks were generated because the source assets were missing.");
+    return;
+  }
+
+  console.log("Image fallback export complete:");
+  created.forEach(function (file) {
+    console.log(" - " + file);
+  });
+}
+
+run().catch(function (error) {
+  console.error(error);
   process.exit(1);
 });

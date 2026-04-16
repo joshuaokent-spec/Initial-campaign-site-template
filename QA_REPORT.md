@@ -8,7 +8,7 @@ Summary:
 - Navigation: skip link, `role="navigation"`, and labeled nav toggles are present.
 - Footer: contact is now clickable (`mailto:` and `tel:`) across pages.
 - Structured data: Organization JSON-LD and Event JSON-LD were added; update real URLs, social handles, and event datetimes/addresses.
-- Robots & Sitemap: `robots.txt` and `sitemap.xml` added. Replace `example.org` with your production domain.
+- Robots & Sitemap: `robots.txt` and `sitemap.xml` are in place. If you deploy somewhere other than GitHub Pages, update the domain references before launch.
 
 Recommended next manual tests:
 

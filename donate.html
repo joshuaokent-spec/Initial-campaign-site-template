@@ -3,12 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Support Joshua Kent for Michigan House of Representatives with a secure contribution through our donation platform." />
+  <meta name="description" content="Support Joshua Kent for Michigan House of Representatives with a contribution that helps fund outreach, organizing, and people-first public engagement." />
   <title>Donate | Joshua Kent for Michigan House of Representatives</title>
-  <link rel="stylesheet" href="assets/css/styles.min.css" />
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="theme-color" content="#142235" />
   <meta property="og:title" content="Donate | Joshua Kent for Michigan House of Representatives" />
-  <meta property="og:description" content="Government for People, Not Power. Practical Reform for Public Good." />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:description" content="Support a campaign built around clean government, housing stability, and public dignity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Joshua Kent for Michigan" />
+  <meta property="og:image" content="assets/img/share-card.svg" />
+  <meta property="og:image:alt" content="Joshua Kent campaign share card" />
+  <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -27,9 +33,8 @@
 
       <nav id="site-nav" class="site-nav" aria-label="Primary" role="navigation">
         <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="issues.html">Issues</a>
-        <a href="for-lansing.html">For Lansing</a>
-        <a href="for-michigan.html">For Michigan</a>
         <a href="events.html">Events</a>
         <a href="press.html">Press</a>
         <a href="contact.html">Contact</a>
@@ -62,12 +67,25 @@
           </p>
         </div>
 
-        <div class="donate-options" style="margin-bottom: 2rem;">
-          <a class="btn btn-primary" href="STRIPE_LINK_10" target="_blank" rel="noopener">$10</a>
-          <a class="btn btn-primary" href="STRIPE_LINK_25" target="_blank" rel="noopener">$25</a>
-          <a class="btn btn-primary" href="STRIPE_LINK_50" target="_blank" rel="noopener">$50</a>
-          <a class="btn btn-ghost" href="STRIPE_LINK_GENERAL" target="_blank" rel="noopener">Other</a>
+        <div class="notice-banner" style="margin-bottom: 1.5rem;">
+          <p class="kicker">Checkout Setup</p>
+          <h3>Secure contribution buttons are now wired for the optional Stripe server in this repo</h3>
+          <p class="micro">
+            On deployments where the checkout endpoint is configured, the buttons below create a live Stripe Checkout session.
+            On previews that do not have a backend attached yet, the page will show a clear setup message instead of sending visitors to dead links.
+          </p>
         </div>
+
+        <div class="donate-options" style="margin-bottom: 1rem;">
+          <button class="btn btn-primary" type="button" data-donation-amount="1000">$10</button>
+          <button class="btn btn-primary" type="button" data-donation-amount="2500">$25</button>
+          <button class="btn btn-primary" type="button" data-donation-amount="5000">$50</button>
+          <button class="btn btn-ghost" type="button" data-donation-amount="5000">Most Needed</button>
+        </div>
+
+        <p id="donationStatus" class="donation-status" aria-live="polite" aria-atomic="true">
+          The contribution buttons will open Stripe Checkout when a donation backend is configured.
+        </p>
 
         <div class="card" style="margin-bottom: 1.5rem;">
           <h3>Why Contribute</h3>
@@ -158,8 +176,9 @@
         <div class="card" style="margin-bottom: 1.5rem;">
           <h3>Secure Processing</h3>
           <p class="micro">
-            Contributions are securely processed through Stripe. Clicking any contribution button above
-            will open a secure donation page in a new tab.
+            Contributions are intended to be processed through Stripe Checkout. In this upgraded demo,
+            the donate buttons call the included checkout endpoint directly so the site behaves honestly:
+            live when the backend is configured, explanatory when it is not.
           </p>
         </div>
 
@@ -197,12 +216,18 @@
       <div>
         <strong>Joshua Kent</strong>
         <p class="micro">Candidate for Michigan House of Representatives • Michigan</p>
-        <p class="micro">Contact: <a href="mailto:info@campaign.org">info@campaign.org</a></p>
+        <p class="micro">Questions or press requests? <a href="contact.html">Use the contact page</a>.</p>
       </div>
 
       <div class="footer-links" aria-label="Footer links">
         <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="issues.html">Issues</a>
+        <a href="research-and-development.html">Research &amp; Development</a>
+        <a href="for-farmers.html">For Farmers</a>
+        <a href="for-educators-and-students.html">For Educators &amp; Students</a>
+        <a href="for-small-business-owners.html">For Small Business Owners</a>
+        <a href="for-the-people.html">For the People</a>
         <a href="for-lansing.html">For Lansing</a>
         <a href="for-michigan.html">For Michigan</a>
         <a href="events.html">Events</a>
@@ -222,3 +247,4 @@
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
+

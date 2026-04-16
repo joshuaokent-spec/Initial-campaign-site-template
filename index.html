@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Official campaign website for Joshua Kent for Michigan House of Representatives. Learn about campaign priorities, reform goals, events, and ways to get involved." />
+  <meta name="description" content="Official campaign website for Joshua Kent for Michigan House of Representatives. Explore the platform, follow campaign updates, volunteer, and support a people-first reform agenda." />
   <title>Joshua Kent for Michigan House of Representatives</title>
-  <link rel="preload" href="assets/img/hero-800.jpg" as="image">
-  <link rel="stylesheet" href="assets/css/styles.min.css" />
+  <link rel="preload" href="assets/img/home-leadership-banner.svg" as="image" />
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="theme-color" content="#142235" />
 
   <meta property="og:title" content="Joshua Kent for Michigan House of Representatives" />
-  <meta property="og:description" content="Government for People, Not Power. Practical Reform for Public Good." />
-  <meta property="og:image" content="assets/img/hero-800.jpg" />
+  <meta property="og:description" content="Government for People, Not Power. Practical reform for public good in Lansing and across Michigan." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Joshua Kent for Michigan" />
+  <meta property="og:image" content="assets/img/share-card.svg" />
+  <meta property="og:image:alt" content="Joshua Kent campaign share card" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <script type="application/ld+json">
@@ -19,13 +24,12 @@
     "@type": "Person",
     "name": "Joshua Kent",
     "jobTitle": "Candidate for Michigan House of Representatives",
-    "url": "https://example.org/",
-    "image": "https://example.org/assets/img/hero-800.jpg",
-    "sameAs": [
-      "https://twitter.com/candidate",
-      "https://facebook.com/candidate",
-      "https://instagram.com/candidate"
-    ]
+    "description": "Joshua Kent is running for the Michigan House of Representatives on a platform centered on democratic reform, housing stability, labor dignity, and accountable public service.",
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Lansing, Michigan"
+    },
+    "image": "assets/img/home-leadership-banner.svg"
   }
   </script>
 </head>
@@ -46,9 +50,8 @@
 
       <nav id="site-nav" class="site-nav" aria-label="Primary" role="navigation">
         <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="issues.html">Issues</a>
-        <a href="for-lansing.html">For Lansing</a>
-        <a href="for-michigan.html">For Michigan</a>
         <a href="events.html">Events</a>
         <a href="press.html">Press</a>
         <a href="contact.html">Contact</a>
@@ -74,19 +77,35 @@
           <div class="hero-cta">
             <a class="btn btn-primary" href="donate.html">Donate</a>
             <a class="btn btn-ghost" href="volunteer.html">Volunteer</a>
+            <a class="btn btn-quiet" href="issues.html">Read the Platform</a>
           </div>
 
           <p class="fineprint">Paid for by Friends of Joshua Kent.</p>
+
+          <div class="hero-highlights" aria-label="Core campaign priorities">
+            <article class="issue">
+              <h3>Clean Government</h3>
+              <p>Build guardrails against corruption, insider capture, and public systems that stop answering to ordinary people.</p>
+            </article>
+            <article class="issue">
+              <h3>Stable Housing</h3>
+              <p>Push for policy that lowers pressure on families, strengthens neighborhoods, and treats housing as a foundation for dignity.</p>
+            </article>
+            <article class="issue">
+              <h3>Dignified Opportunity</h3>
+              <p>Support education, labor rights, and public investment that help people build stable lives instead of merely surviving.</p>
+            </article>
+          </div>
         </div>
 
         <div class="hero-media">
           <img
-            src="assets/img/joshua-kent-homepage-banner-v2.svg"
-            alt="A campaign banner showing the Michigan State Capitol and a people-first public crowd, representing Joshua Kent's commitment to the people over power."
+            src="assets/img/home-leadership-banner.svg"
+            alt="A professional campaign banner showing public leadership, community, and a people-first vision for Michigan."
             class="hero-photo img"
             loading="eager"
             width="1600"
-            height="700">
+            height="900">
         </div>
       </div>
     </section>
@@ -105,9 +124,10 @@
             id="newsletterForm"
             action="https://formspree.io/f/maqlkgoo"
             method="POST"
+            data-pending-label="Signing up..."
           >
             <input type="hidden" name="_subject" value="New newsletter signup" />
-            <input type="hidden" name="_next" value="thank-you.html" />
+            <input type="hidden" name="_next" value="thank-you.html?type=updates" />
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
             <label class="sr-only" for="email">Email</label>
@@ -124,13 +144,13 @@
         </div>
 
         <div class="card">
-          <h2>Upcoming Event</h2>
-          <p class="micro">Saturday, February 21 • 2:00 PM • Downtown Community Center</p>
+          <h2>Event Schedule</h2>
+          <p class="micro">New public dates will be posted as soon as they are confirmed.</p>
           <p>
-            Join Joshua Kent for a public town hall focused on reform, accountability,
-            and the issues shaping everyday life in Michigan communities.
+            Rather than leave stale sample dates on the site, this page now points supporters to the
+            next round of listening sessions, volunteer orientations, and community conversations as they are booked.
           </p>
-          <a class="btn btn-ghost" href="events.html">See all events</a>
+          <a class="btn btn-ghost" href="events.html">See what’s coming</a>
         </div>
 
         <div class="card">
@@ -147,48 +167,108 @@
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <h2>Why this campaign matters</h2>
+          <h2>A campaign shaped by real life</h2>
           <p class="subhead">
-            Michigan can help prove that democratic reform, worker dignity, and accountable public service are still possible.
+            Joshua Kent’s message comes from family responsibility, struggle, service, school, and seeing up close how public systems can fail the people who depend on them.
+          </p>
+        </div>
+
+        <div class="page-hero-grid">
+          <div>
+            <p class="micro">
+              Joshua is a family man who knows what it means to struggle in college, serve in the military,
+              return to school with renewed purpose, and work as a teacher and tutor. Those experiences shaped
+              his belief that government should not merely manage decline or reward insiders. It should help people
+              build stable, meaningful lives.
+            </p>
+            <p class="micro">
+              That is why this campaign is centered on cleaner government, stronger schools, smarter public investment,
+              fairer economic rules, and institutions designed to work for ordinary people instead of concentrated power.
+            </p>
+            <div class="page-actions">
+              <a class="btn btn-primary" href="about.html">Read About Joshua</a>
+              <a class="btn btn-ghost" href="for-the-people.html">Why “For the People” Matters</a>
+            </div>
+          </div>
+
+          <div class="visual-card">
+            <img
+              src="assets/img/about-life-journey.svg"
+              alt="A campaign illustration representing Joshua Kent's journey through family life, service, education, and classroom work."
+              width="1600"
+              height="900"
+              loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container">
+        <div class="section-head">
+          <h2>Explore the platform</h2>
+          <p class="subhead">
+            These pages break the campaign down by community, issue area, and the broader ideals that guide Joshua Kent’s public service.
           </p>
         </div>
 
         <div class="card" style="margin-bottom: 1.5rem;">
           <p class="micro">
-            This campaign is rooted in a broader vision of political and economic reform:
-            stronger democratic representation, real anti-corruption safeguards, protections
-            against concentrated corporate power, a higher floor for working people, and public
-            institutions designed to actually serve the common good. The goal is not simply to win
-            office, but to help build a model of government that works for people again.
+            The platform is a growing body of work built from Joshua’s reform documents, classroom experience,
+            and a people-first view of what government should do. Some sections are more developed than others today,
+            but together they show the direction of the campaign clearly: rights, accountability, opportunity, and durable public investment.
           </p>
         </div>
 
-        <div class="grid-3">
+        <div class="platform-grid">
           <article class="issue">
-            <h3>Democratic Reform</h3>
-            <p>
-              Support stronger representation, anti-gerrymandering reforms, direct accountability,
-              and institutions designed to resist capture and restore public trust.
-            </p>
-            <a href="issues.html#democracy" class="text-link">Read more →</a>
+            <h3>Research &amp; Development</h3>
+            <p>Increase support for science, education, energy modernization, and practical innovation that serves the public.</p>
+            <a href="research-and-development.html" class="text-link">Explore the R&amp;D agenda →</a>
           </article>
 
           <article class="issue">
-            <h3>Workers &amp; Economic Justice</h3>
-            <p>
-              Protect labor rights, strengthen wage standards, support unions and cooperatives,
-              and build an economy that serves working people instead of monopoly power.
-            </p>
-            <a href="issues.html#economy" class="text-link">Read more →</a>
+            <h3>For Farmers</h3>
+            <p>Support rural communities with fairer markets, stronger infrastructure, water stewardship, and long-term resilience.</p>
+            <a href="for-farmers.html" class="text-link">Read the farmers page →</a>
           </article>
 
           <article class="issue">
-            <h3>Education &amp; Opportunity</h3>
+            <h3>For Educators &amp; Students</h3>
+            <p>Build schools around dignity, tutoring, practical pathways, and more serious support for classrooms.</p>
+            <a href="for-educators-and-students.html" class="text-link">Read the education page →</a>
+          </article>
+
+          <article class="issue">
+            <h3>For Small Business Owners</h3>
+            <p>Fight monopoly pressure, improve access to local capital, and strengthen real ownership pathways.</p>
+            <a href="for-small-business-owners.html" class="text-link">Read the small business page →</a>
+          </article>
+
+          <article class="issue">
+            <h3>For the People</h3>
+            <p>See the core philosophy behind the campaign: rights, public accountability, dignity, and government that answers to the public.</p>
+            <a href="for-the-people.html" class="text-link">Read the people-first page →</a>
+          </article>
+
+          <article class="issue">
+            <h3>For Lansing</h3>
+            <p>See what this reform agenda could mean in practical terms for the district Joshua hopes to represent first.</p>
+            <a href="for-lansing.html" class="text-link">Read the Lansing agenda →</a>
+          </article>
+
+          <article class="issue">
+            <h3>For Michigan</h3>
+            <p>Explore how Joshua’s first-term priorities connect to a broader statewide reform vision for Michigan.</p>
+            <a href="for-michigan.html" class="text-link">Read the statewide agenda →</a>
+          </article>
+
+          <article class="issue">
+            <h3>Full Issues Overview</h3>
             <p>
-              Expand access to quality education, reform harmful discipline systems,
-              strengthen workforce pathways, and help people build stable, meaningful lives.
+              Start with the big-picture platform across democracy, corruption, the economy, housing, education, care, justice, and infrastructure.
             </p>
-            <a href="issues.html#education" class="text-link">Read more →</a>
+            <a href="issues.html" class="text-link">Browse all issues →</a>
           </article>
         </div>
       </div>
@@ -418,12 +498,18 @@
       <div>
         <strong>Joshua Kent</strong>
         <p class="micro">Candidate for Michigan House of Representatives • Michigan</p>
-        <p class="micro">Contact: <a href="mailto:info@campaign.org">info@campaign.org</a></p>
+        <p class="micro">Questions or press requests? <a href="contact.html">Use the contact page</a>.</p>
       </div>
 
       <div class="footer-links" aria-label="Footer links">
         <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <a href="issues.html">Issues</a>
+        <a href="research-and-development.html">Research &amp; Development</a>
+        <a href="for-farmers.html">For Farmers</a>
+        <a href="for-educators-and-students.html">For Educators &amp; Students</a>
+        <a href="for-small-business-owners.html">For Small Business Owners</a>
+        <a href="for-the-people.html">For the People</a>
         <a href="for-lansing.html">For Lansing</a>
         <a href="for-michigan.html">For Michigan</a>
         <a href="events.html">Events</a>
@@ -443,3 +529,4 @@
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
+

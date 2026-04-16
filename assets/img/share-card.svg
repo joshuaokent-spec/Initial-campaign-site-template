@@ -1,0 +1,42 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Joshua Kent for Michigan House of Representatives</title>
+  <desc id="desc">Campaign share card featuring the slogan Government for People, Not Power and the priorities clean government, stable housing, and dignified public services.</desc>
+  <rect width="1200" height="630" fill="#F7FBFF"/>
+  <rect width="1200" height="630" fill="url(#paperGlow)"/>
+  <path d="M0 505C138 442 243 424 361 447C472 468 556 530 678 538C808 547 933 486 1039 461C1099 447 1153 445 1200 451V630H0V505Z" fill="#E8F0FA"/>
+  <path d="M0 556C125 509 223 500 323 515C455 535 547 597 682 607C819 618 931 578 1031 558C1097 545 1154 547 1200 555V630H0V556Z" fill="#D6E4F5"/>
+  <circle cx="1042" cy="156" r="160" fill="#D05347" fill-opacity="0.11"/>
+  <circle cx="171" cy="84" r="180" fill="#2F72C4" fill-opacity="0.12"/>
+  <rect x="74" y="70" width="86" height="86" rx="23" fill="#142235"/>
+  <path d="M100 94H136C138.761 94 141 96.2386 141 99V126C141 128.761 138.761 131 136 131H100C97.2386 131 95 128.761 95 126V99C95 96.2386 97.2386 94 100 94Z" fill="#F7FBFF"/>
+  <path d="M104 106H132" stroke="#D05347" stroke-width="6" stroke-linecap="round"/>
+  <path d="M104 118H126" stroke="#2F72C4" stroke-width="6" stroke-linecap="round"/>
+  <path d="M104 130H121" stroke="#2F72C4" stroke-width="6" stroke-linecap="round"/>
+  <text x="190" y="112" fill="#D05347" font-family="'Aptos','Segoe UI',Arial,sans-serif" font-size="24" font-weight="800" letter-spacing="4">JOSHUA KENT</text>
+  <text x="190" y="236" fill="#142235" font-family="'Iowan Old Style','Palatino Linotype',Georgia,serif" font-size="68" font-weight="700">
+    <tspan x="190" dy="0">Government for</tspan>
+    <tspan x="190" dy="78">People, Not Power</tspan>
+  </text>
+  <text x="190" y="378" fill="#42617F" font-family="'Aptos','Segoe UI',Arial,sans-serif" font-size="30" font-weight="600">
+    <tspan x="190" dy="0">Practical reform for public good.</tspan>
+    <tspan x="190" dy="44">Clean government, stable housing, and dignified public services.</tspan>
+  </text>
+  <g transform="translate(190 474)">
+    <rect width="242" height="62" rx="31" fill="#142235"/>
+    <text x="121" y="39" text-anchor="middle" fill="#F7FBFF" font-family="'Aptos','Segoe UI',Arial,sans-serif" font-size="24" font-weight="700">Michigan House</text>
+  </g>
+  <g transform="translate(454 474)">
+    <rect width="210" height="62" rx="31" fill="#FFFFFF" stroke="#BECDDD" stroke-width="2"/>
+    <text x="105" y="39" text-anchor="middle" fill="#142235" font-family="'Aptos','Segoe UI',Arial,sans-serif" font-size="24" font-weight="700">Lansing First</text>
+  </g>
+  <g transform="translate(686 474)">
+    <rect width="266" height="62" rx="31" fill="#FFFFFF" stroke="#BECDDD" stroke-width="2"/>
+    <text x="133" y="39" text-anchor="middle" fill="#142235" font-family="'Aptos','Segoe UI',Arial,sans-serif" font-size="24" font-weight="700">People-Powered</text>
+  </g>
+  <defs>
+    <radialGradient id="paperGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(184 98) rotate(35.97) scale(782.237 642.289)">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F7FBFF"/>
+    </radialGradient>
+  </defs>
+</svg>
